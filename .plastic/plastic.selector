@@ -1,4 +1,3 @@
 repository "Sushi Bussin/Sushi Bussin@20066982525930@cloud"
   path "/"
-    br "/main"
-    co "/main"
+    smartbranch "/main"

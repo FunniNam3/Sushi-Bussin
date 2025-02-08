@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b1b9869f3559ef945ba60ac488291c68
+guid: 0fb3399777ec0474293bea65f23352c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8938819534478884857
-    second: Plate_0
+      213: -7322981145990669976
+    second: Sauce Dish 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Plate_0
+      name: Sauce Dish 2_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 470
-        height: 182
+        x: 0
+        y: 0
+        width: 116
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70040184efee2f380800000000000000
-      internalID: -8938819534478884857
+      spriteID: 869d750527b8f5a90800000000000000
+      internalID: -7322981145990669976
       vertices: []
       indices: 
       edges: []
