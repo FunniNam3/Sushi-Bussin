@@ -2,14 +2,14 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
-using Unity.Mathematics;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     bool timerActive = true;
     float currentTime;
     float startTime;
-    public int startMinutes;
+    public float startMinutes;
     public TextMeshProUGUI CurrentTimeLeft;
     public Image ProgressCircle;
     public Image TimerArm;
@@ -25,6 +25,10 @@ public class Timer : MonoBehaviour
         if (timerActive)
         {
             currentTime = currentTime - Time.deltaTime;
+        }
+        if (currentTime <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         CurrentTimeLeft.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();

@@ -7,4 +7,9 @@ public class LoadScenes : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void GoToScene(string sceneName){
+        SceneManager.LoadScene(sceneName);
+    }
+
 }

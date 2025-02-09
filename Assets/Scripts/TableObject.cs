@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -29,6 +28,7 @@ public class TableObject : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         moving = false;
         if (inBucket)
         {
+            ++(GameManager.TrashCollected);
             allowMove = false;
         }
     }
@@ -96,24 +96,24 @@ public class TableObject : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
             }
 
             // Top Left corner
-            temp = new Vector3(position.x - (rectTransform.rect.width / 2), position.y + (rectTransform.rect.height / 2) + 0.1f, position.z);
+            temp = new Vector3(position.x - (rectTransform.rect.width / 2) - 0.1f, position.y + (rectTransform.rect.height / 2) + 0.1f, position.z);
             if (!other.bounds.Contains(temp))
             {
-                transform.position += new Vector3(0.05f, -0.05f, 0);
+                transform.position += new Vector3(0.033f, -0.05f, 0);
             }
 
             // Bottom Right corner
-            temp = new Vector3(position.x + (rectTransform.rect.width / 2) + 0.1f, position.y - (rectTransform.rect.height / 2), position.z);
+            temp = new Vector3(position.x + (rectTransform.rect.width / 2) + 0.1f, position.y - (rectTransform.rect.height / 2) - 0.1f, position.z);
             if (!other.bounds.Contains(temp))
             {
-                transform.position += new Vector3(-0.05f, 0.05f, 0);
+                transform.position += new Vector3(-0.05f, 0.033f, 0);
             }
 
             // Bottom Left corner
-            temp = new Vector3(position.x - (rectTransform.rect.width / 2), position.y - (rectTransform.rect.height / 2), position.z);
+            temp = new Vector3(position.x - (rectTransform.rect.width / 2) - 0.1f, position.y - (rectTransform.rect.height / 2) - 0.1f, position.z);
             if (!other.bounds.Contains(temp))
             {
-                transform.position += new Vector3(0.05f, 0.05f, 0);
+                transform.position += new Vector3(0.033f, 0.03f, 0);
             }
         }
     }
