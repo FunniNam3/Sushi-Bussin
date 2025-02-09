@@ -19,7 +19,7 @@ public class TableObject : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
         moving = true;
         if (allowMove)
         {
-            sortingOrder = ++(gameManager.topOrder);
+            sortingOrder = gameManager.topOrder;
             gameManager.objectChanged = true;
         }
     }
